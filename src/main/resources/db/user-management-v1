@@ -1,0 +1,158 @@
+use user-management-v1
+db.configData.insert({
+  "createdByUserId": "systemuser",
+  "createdByUserName": "system user",
+  "createdAt": "1645022456618",
+  "updatedByUserId": "systemuser",
+  "updatedByUserName": "systemuser",
+  "updatedAt": "1645022456618",
+  "version": 0,
+  "isActive": true,
+  "departments": [
+    {
+      "id": "catalogueDeptId",
+      "name": "CATALOGUE",
+      "description": "Catalogue Department",
+      "roles": [
+        {
+          "roleId": "SUPERVISOR",
+          "userTypes": [
+            {
+              "userTypeId": "MAKER",
+              "permissions": [
+                "ROLE_ADD_CATEGORY",
+                "ROLE_VIEW_CATEGORY",
+                "ROLE_EDIT_CATEGORY",
+                "ROLE_ADD_SUPPLIER",
+                "ROLE_VIEW_SUPPLIER",
+                "ROLE_EDIT_SUPPLIER"
+              ]
+            },
+            {
+              "userTypeId": "CHECKER",
+              "permissions": [
+                "ROLE_VIEW_CATEGORY",
+                "ROLE_VIEW_SUPPLIER",
+                "ROLE_APPROVE_CATEGORY"
+              ]
+            },
+            {
+              "userTypeId": "MAKER_CHECKER",
+              "permissions": [
+                "ROLE_ADD_CATEGORY",
+                "ROLE_VIEW_CATEGORY",
+                "ROLE_EDIT_CATEGORY",
+                "ROLE_ADD_SUPPLIER",
+                "ROLE_VIEW_SUPPLIER",
+                "ROLE_EDIT_SUPPLIER",
+                "ROLE_APPROVE_CATEGORY"
+              ]
+            }
+          ]
+        },
+        {
+          "roleId": "EXECUTIVE",
+          "userTypes": [
+            {
+              "userTypeId": "MAKER",
+              "permissions": [
+                "ROLE_ADD_CATEGORY",
+                "ROLE_VIEW_CATEGORY",
+                "ROLE_EDIT_CATEGORY",
+                "ROLE_ADD_SUPPLIER",
+                "ROLE_VIEW_SUPPLIER",
+                "ROLE_EDIT_SUPPLIER"
+              ]
+            }
+          ]
+        },
+        {
+          "roleId": "ASSOCIATE",
+          "userTypes": [
+            {
+              "userTypeId": "MAKER",
+              "permissions": [
+                "ROLE_ADD_CATEGORY",
+                "ROLE_VIEW_CATEGORY",
+                "ROLE_ADD_SUPPLIER",
+                "ROLE_VIEW_SUPPLIER"
+              ]
+            }
+          ]
+        }
+      ],
+      "permissions": [
+        {
+          "id": "ROLE_ADD_CATEGORY",
+          "label": "Add Category"
+        },
+        {
+          "id": "ROLE_VIEW_CATEGORY",
+          "label": "View Category"
+        },
+        {
+          "id": "ROLE_EDIT_CATEGORY",
+          "label": "Edit category"
+        },
+        {
+          "id": "ROLE_DELETE_CATEGORY",
+          "label": "Delete category"
+        },
+        {
+          "id": "ROLE_ADD_SUPPLIER",
+          "label": "Add Supplier"
+        },
+        {
+          "id": "ROLE_VIEW_SUPPLIER",
+          "label": "view  Supplier"
+        },
+        {
+          "id": "ROLE_EDIT_SUPPLIER",
+          "label": "Edit Supplier"
+        },
+        {
+          "id": "ROLE_DELETE_SUPPLIER",
+          "label": "Delete Supplier"
+        },
+        {
+          "id": "ROLE_APPROVE_CATEGORY",
+          "label": "Approve Category"
+        }
+      ]
+    }
+  ],
+  "roles": [
+    {
+      "id": "MANAGEMENT",
+      "name": "MANAGEMENT"
+    },
+    {
+      "id": "SUPERVISOR",
+      "name": "SUPERVISOR"
+    },
+    {
+      "id": "EXECUTIVE",
+      "name": "EXECUTIVE"
+    },
+    {
+      "id": "ASSOCIATE",
+      "name": "ASSOCIATE"
+    }
+  ],
+  "userTypes": [
+    {
+      "id": "MAKER",
+      "label": "Maker"
+    },
+    {
+      "id": "CHECKER",
+      "label": "Checker"
+    },
+    {
+      "id": "MAKER_CHECKER",
+      "label": "Maker and Checker"
+    }
+  ]
+})
+
+db.user.insert({"_id":ObjectId("621354ce3dce23390c562c5a"),"createdByUserId":"system","createdByUserName":"system","createdAt":1645022456618,"updatedByUserId":"system","updatedByUserName":"system","updatedAt":1645022456618,"version":0,"isActive":true,"fullName":"TestUser1","email":"testuser@yaari.com","mobile":1234567890,"password":"$2a$10$hDZ3LpgxOZnSLwGM8I0zfOuPt7vcTsPdX7JDdeU53cnW2A1PzEoou","status":"APPROVED","type":"BACKOFFICE","enable":true,"firstTimeLogin":false,"managementUser":true})
